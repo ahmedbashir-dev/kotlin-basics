@@ -50,5 +50,27 @@ fun main() {
     println("Right now $contactTemplate")
     println("Next year it would be ${age + 1}")
 
+    // String functions
+
+    var text = "Hello there!"
+    print(text.isEmpty())
+    print(text.isNotEmpty())
+    text = "  "
+    print(text.isNotEmpty())
+    print(text.isEmpty())
+
+//    println(text.contains("there"))
+
+    // Nullable types
+//    var aNullableString: String = null; by default types are not nullable
+    var aNullableString: String? = null;
+//    aNullableString = "Name";
+//    println(aNullableString.length)
+//      println(aNullableString!!.length) // throws null ptr
+      println(aNullableString?.length) // null safe call
+
+    //Elvis op
+    println(aNullableString?.length ?: "The value was null")
+
 
 }
